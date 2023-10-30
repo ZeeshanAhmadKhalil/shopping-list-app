@@ -13,6 +13,7 @@ export const itemApi = api.injectEndpoints({
                     method: 'GET',
                 }
             },
+            providesTags: ['Item']
         }),
         findOne: builder.query({
             query: ({
@@ -34,6 +35,7 @@ export const itemApi = api.injectEndpoints({
                     body,
                 }
             },
+            invalidatesTags: ['Item']
         }),
         patchItem: builder.mutation({
             query: ({
@@ -47,6 +49,7 @@ export const itemApi = api.injectEndpoints({
                     body,
                 }
             },
+            invalidatesTags: ['Item']
         }),
         deleteItem: builder.mutation({
             query: ({
@@ -58,6 +61,7 @@ export const itemApi = api.injectEndpoints({
                     method: 'DELETE',
                 }
             },
+            invalidatesTags: ['Item']
         }),
 
     }),

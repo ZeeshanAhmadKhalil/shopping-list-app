@@ -10,7 +10,9 @@ import {
 console.log("baseUrlLocal===>", baseUrlLocal)
 
 export const api = createApi({
-    tagTypes: [],
+    tagTypes: [
+        'Item',
+    ],
     baseQuery:
         fetchBaseQuery({
             baseUrl:

@@ -3,14 +3,17 @@ import {
 } from '@mui/material';
 
 function Button({
-    onClick,
     title,
+    onClick,
+    variant = "contained",
+    ...rest
 }: any) {
 
     return (
         <MuiButton
-            variant="contained"
+            variant={variant}
             onClick={onClick}
+            {...rest}
         >
             {title}
         </MuiButton>
